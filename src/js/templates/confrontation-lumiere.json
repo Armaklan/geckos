@@ -269,6 +269,7 @@
         },
         {
           "type": "image",
+          "zindex": 4,
           "left": 635,
           "top": 225,
           "width": 60,
@@ -292,6 +293,7 @@
         },
         {
           "type": "image",
+          "zindex": 4,
           "left": 635,
           "top": 225,
           "width": 60,
@@ -351,6 +353,7 @@
         },
         {
           "type": "image",
+          "zindex": 2,
           "left": 145,
           "top": 159,
           "width": 540,
