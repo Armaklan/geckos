@@ -386,9 +386,9 @@
         {
           "type": "textbox",
           "zindex": 4,
-          "width": 120,
+          "width": 135,
           "height": 30,
-          "left": 15,
+          "left": 0,
           "top": 228,
           "fill": "#ccc",
           "text": "$mouvement$",
