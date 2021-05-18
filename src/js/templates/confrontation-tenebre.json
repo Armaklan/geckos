@@ -62,7 +62,6 @@
           "expanded": true
         },
         {
-          "type": "number",
           "name": "mouvement",
           "label": "Mouvement",
           "default": 10,
@@ -112,7 +111,6 @@
           "group": "grpAttribut"
         },
         {
-          "type": "number",
           "name": "discipline",
           "label": "Discipline",
           "group": "grpAttribut"
