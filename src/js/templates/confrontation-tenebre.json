@@ -1,0 +1,559 @@
+{
+  "styles": [
+    {
+      "key": "default",
+      "name": "Default",
+      "fields": [
+        {
+          "name": "nom",
+          "label": "Nom"
+        },
+        {
+          "name": "classe",
+          "label": "Classe"
+        },
+        {
+          "name": "type",
+          "label": "Type",
+          "type": "options",
+          "default": "combattant",
+          "options": [
+              { "option" : "combattant", "text": "Combattant" },
+              { "option" : "tireur", "text": "Tireur" },
+              { "option" : "magicien", "text": "Magicien" },
+              { "option" : "pretre", "text": "Prêtre" }
+          ]
+        },
+        {
+          "name": "armee",
+          "label": "Armée",
+          "type": "options",
+          "default": "./js/templates/confrontation/acheron.png",
+          "options": [
+              { "option" : "./js/templates/confrontation/acheron.png", "text": "Acheron" },
+              { "option" : "./js/templates/confrontation/aran.png", "text": "Aran" },
+              { "option" : "./js/templates/confrontation/behemot.png", "text": "Behemot" },
+              { "option" : "./js/templates/confrontation/cynwall.png", "text": "Cynwall" },
+              { "option" : "./js/templates/confrontation/daikinie.png", "text": "Daikinie" },
+              { "option" : "./js/templates/confrontation/devoreur.png", "text": "Dévoreur" },
+              { "option" : "./js/templates/confrontation/dirz.png", "text": "Dirz" },
+              { "option" : "./js/templates/confrontation/drune.png", "text": "Drune" },
+              { "option" : "./js/templates/confrontation/gobelin.png", "text": "Gobelin" },
+              { "option" : "./js/templates/confrontation/griffon.png", "text": "Griffon" },
+              { "option" : "./js/templates/confrontation/lion.png", "text": "Lion" },
+              { "option" : "./js/templates/confrontation/midnor.png", "text": "Mid-Nor" },
+              { "option" : "./js/templates/confrontation/ophidien.png", "text": "Ophidien" },
+              { "option" : "./js/templates/confrontation/orque.png", "text": "Orque" },
+              { "option" : "./js/templates/confrontation/sessair.png", "text": "Sessair" },
+              { "option" : "./js/templates/confrontation/tnb.png", "text": "Tir-Na-Bor" },
+              { "option" : "./js/templates/confrontation/tnb.png", "text": "Wolfen" }
+          ]
+        },
+        {
+          "type": "image",
+          "name": "portray",
+          "label": "Portrait",
+          "ratio": 0.843
+        },
+        {
+          "name": "grpAttribut",
+          "label": "Attribut",
+          "type": "group",
+          "expanded": true
+        },
+        {
+          "type": "number",
+          "name": "mouvement",
+          "label": "Mouvement",
+          "default": 10,
+          "group": "grpAttribut"
+        },
+        {
+          "type": "number",
+          "name": "initiative",
+          "label": "Initiative",
+          "group": "grpAttribut"
+        },
+        {
+          "type": "number",
+          "name": "attaque",
+          "label": "Attaque",
+          "group": "grpAttribut"
+        },
+        {
+          "type": "number",
+          "name": "force",
+          "label": "Force",
+          "group": "grpAttribut"
+        },
+        {
+          "type": "number",
+          "name": "defense",
+          "label": "Défense",
+          "group": "grpAttribut"
+        },
+        {
+          "type": "number",
+          "name": "resistance",
+          "label": "Résistance",
+          "group": "grpAttribut"
+        },
+        {
+          "name": "effrayant",
+          "label": "Effrayant",
+          "type": "checkbox",
+          "default": false,
+          "group": "grpAttribut"
+        },
+        {
+          "type": "number",
+          "name": "courage",
+          "label": "Courage",
+          "group": "grpAttribut"
+        },
+        {
+          "type": "number",
+          "name": "discipline",
+          "label": "Discipline",
+          "group": "grpAttribut"
+        },
+        {
+          "type": "number",
+          "name": "pouvoir",
+          "label": "Pouvoir",
+          "group": "grpAttribut"
+        },
+        {
+          "name": "grpTir",
+          "label": "Tir",
+          "type": "group",
+          "expanded": false
+        },
+        {
+          "type": "number",
+          "name": "atttir",
+          "label": "Valeur de tir",
+          "group": "grpTir"
+        },
+        {
+          "type": "number",
+          "name": "fortir",
+          "label": "Force de tir",
+          "group": "grpTir"
+        },
+        {
+          "name": "portee",
+          "label": "Portée",
+          "group": "grpTir"
+        },
+        {
+          "name": "grpFoi",
+          "label": "Foi",
+          "type": "group",
+          "expanded": false
+        },
+        {
+          "type": "number",
+          "name": "creation",
+          "label": "Création",
+          "group": "grpFoi"
+        },
+        {
+          "type": "number",
+          "name": "alteration",
+          "label": "Altération",
+          "group": "grpFoi"
+        },
+        {
+          "type": "number",
+          "name": "destruction",
+          "label": "Destruction",
+          "group": "grpFoi"
+        },
+        {
+          "name": "equipement",
+          "label": "Equipement",
+          "default": "",
+          "type": "richtext"
+        },
+        {
+          "name": "competence",
+          "label": "Compétences",
+          "default": "",
+          "type": "richtext"
+        },
+        {
+          "name": "capacite",
+          "label": "Capacité",
+          "default": "",
+          "type": "richtext"
+        },
+        {
+          "name": "rang",
+          "label": "Rang",
+          "default": "Regulier",
+          "type": "text"
+        },
+        {
+          "name": "taille",
+          "label": "Taille",
+          "default": "Taille normale",
+          "type": "text"
+        },
+        {
+          "type": "number",
+          "name": "pa",
+          "label": "PA"
+        }
+      ],
+      "canvasFields": [
+        {
+          "type": "image",
+          "width": 750,
+          "height": 1039,
+          "left": 0,
+          "top": 0,
+          "src": "./js/templates/confrontation/fond.png"
+        },
+        {
+          "type": "image",
+          "left": 45,
+          "top": 159,
+          "width": 669,
+          "height": 820,
+          "src": "./js/templates/confrontation/attributs.png"
+        },
+        {
+          "type": "image",
+          "left": 45,
+          "top": 628,
+          "width": 60,
+          "height": 60,
+          "visible": "?effrayant",
+          "src": "./js/templates/confrontation/peur.png"
+        },
+        {
+          "type": "image",
+          "left": 635,
+          "top": 225,
+          "width": 60,
+          "height": 60,
+          "visible": "{{value = card[type] == 'tireur';}}",
+          "src": "./js/templates/confrontation/tir.png"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 605,
+          "top": 285,
+          "fill": "#ccc",
+          "text": "$atttir$ · $fortir$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center",
+          "visible": "{{value = card[type] == 'tireur';}}"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 605,
+          "top": 320,
+          "fill": "#ccc",
+          "text": "$portee$",
+          "fontSize": 34,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center",
+          "visible": "{{value = card[type] == 'tireur';}}"
+        },
+        {
+          "type": "image",
+          "left": 635,
+          "top": 225,
+          "width": 60,
+          "height": 60,
+          "visible": "{{value = card[type] == 'magicien';}}",
+          "src": "./js/templates/confrontation/pouvoir.png"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 605,
+          "top": 285,
+          "fill": "#ccc",
+          "text": "$pouvoir$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center",
+          "visible": "{{value = card[type] == 'magicien';}}"
+        },
+        {
+          "type": "image",
+          "left": 635,
+          "top": 225,
+          "width": 60,
+          "height": 60,
+          "visible": "{{value = card[type] == 'pretre';}}",
+          "src": "./js/templates/confrontation/foi.png"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 605,
+          "top": 285,
+          "fill": "#ccc",
+          "text": "$alteration$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center",
+          "visible": "{{value = card[type] == 'pretre';}}"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 550,
+          "top": 240,
+          "fill": "#ccc",
+          "text": "$creation$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center",
+          "visible": "{{value = card[type] == 'pretre';}}"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 660,
+          "top": 240,
+          "fill": "#ccc",
+          "text": "$destruction$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center",
+          "visible": "{{value = card[type] == 'pretre';}}"
+        },
+        {
+          "type": "image",
+          "left": 16,
+          "top": 30,
+          "width": 118,
+          "height": 118,
+          "src": "$armee"
+        },
+        {
+          "type": "image",
+          "left": 145,
+          "top": 159,
+          "width": 540,
+          "height": 640,
+          "src": "$portray"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 600,
+          "height": 30,
+          "left": 120,
+          "top": 40,
+          "fill": "#e6e6e6",
+          "text": "$nom$",
+          "fontSize": 60,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "right"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 600,
+          "height": 30,
+          "left": 120,
+          "top": 100,
+          "fill": "#e6e6e6",
+          "text": "$classe$",
+          "fontSize": 32,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "right"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 15,
+          "top": 228,
+          "fill": "#ccc",
+          "text": "$mouvement$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 15,
+          "top": 346,
+          "fill": "#ccc",
+          "text": "$initiative$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 15,
+          "top": 463,
+          "fill": "#ccc",
+          "text": "$attaque$ · $force$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 15,
+          "top": 577,
+          "fill": "#ccc",
+          "text": "$defense$ · $resistance$",
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 120,
+          "height": 30,
+          "left": 15,
+          "top": 695,
+          "fill": "#ccc",
+          "text": "$courage$ · $discipline$",  
+          "fontSize": 40,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "center"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 700,
+          "left": 35,
+          "top": 800,
+          "fill": "#e6e6e6",
+          "text": "$equipement$",  
+          "fontSize": 26,
+          "fontFamily": "Libre Baskerville",
+          "fontStyle": "italic",
+          "textAlign": "left"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 700,
+          "left": 35,
+          "top": 850,
+          "fill": "#e6e6e6",
+          "text": "$competence$",  
+          "fontSize": 28,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "left"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 700,
+          "left": 35,
+          "top": 950,
+          "fill": "#e6e6e6",
+          "text": "$capacite$",  
+          "fontSize": 38,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "right"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 700,
+          "left": 35,
+          "top": 988,
+          "fill": "#e6e6e6",
+          "text": "$rang$ · $taille$",  
+          "fontSize": 28,
+          "fontFamily": "Libre Baskerville",
+          "textAlign": "right"
+        },
+        {
+          "type": "textbox",
+          "zindex": 4,
+          "width": 700,
+          "left": 20,
+          "top": 964,
+          "fill": "#e6e6e6",
+          "text": "$pa$",  
+          "fontSize": 70,
+          "fontFamily": "Libre Baskerville",
+          "fontWeight": "bold",
+          "textAlign": "left"
+        },
+        {
+          "type": "textbox",
+          "zindex": 3,
+          "width": 700,
+          "left": 18,
+          "top": 962,
+          "fill": "#1d1d1d",
+          "text": "$pa$",  
+          "fontSize": 70,
+          "fontFamily": "Libre Baskerville",
+          "fontWeight": "bold",
+          "textAlign": "left"
+        },
+        {
+          "type": "textbox",
+          "zindex": 3,
+          "width": 700,
+          "left": 22,
+          "top": 966,
+          "fill": "#1d1d1d",
+          "text": "$pa$",  
+          "fontSize": 70,
+          "fontFamily": "Libre Baskerville",
+          "fontWeight": "bold",
+          "textAlign": "left"
+        }
+      ],
+      "canvasBackground": "#000",
+      "canvasWidth": 750,
+      "canvasHeight": 1039
+    }
+  ],
+  "webfonts": {
+		"google": {
+			"families": ["Libre Baskerville:400,400i,700,700i"]
+		}
+	},
+  "description": {
+    "description": "Template for Confrontation card",
+    "title": "Confrontation Ténèbre",
+    "credits": "by Arma",
+    "key": "conf-tenebre-v1",
+    "url": "https://github.com/Gulix/geckos/"
+  }
+}

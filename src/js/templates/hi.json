@@ -1,0 +1,111 @@
+{
+  "styles": [
+    {
+      "key": "hi-majeur",
+      "name": "Honor & Intrigue - Majeur",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name"
+        },
+        {
+          "name": "type",
+          "label": "Type",
+          "default": "Manoeuvre majeure"
+        },
+        {
+			"name": "icontype",
+			"label": "Icon Type",
+			"default": "./js/templates/hi/background.png",
+			"type": "options",
+			"options": [
+			    {"option": "./js/templates/hi/background.png", "text": "Majeure"},
+			    {"option": "./js/templates/hi/background-orange.png", "text": "Mineure"},
+			    {"option": "./js/templates/hi/background-vert.png", "text": "Réaction"},
+			    {"option": "./js/templates/hi/background-bleu.png", "text": "Spéciale"}
+			]
+		},
+        {
+          "name": "description",
+          "label": "Description",
+          "default": "",
+          "type": "richtext"
+        },
+        {
+          "name": "maitrise",
+          "label": "Maitrise",
+          "default": "",
+          "type": "richtext"
+        }
+      ],
+      "canvasFields": [
+        {
+			"type": "image",
+			"left": 0,
+			"top": 0,
+			"width": 451,
+			"height": 628,
+			"src": "$icontype"
+		},
+        {
+          "type": "textbox",
+          "text": "$name",
+          "left": 0,
+          "top": 60,
+          "width": 452,
+          "textAlign": "center",
+          "fill": "#000",
+          "fontFamily": "Berry Rotunda",
+          "fontWeight": 700,
+          "fontSize": "32"
+        },
+        {
+          "type": "textbox",
+          "text": "$type",
+          "left": 250,
+          "top": 143,
+          "width": 200,
+          "textAlign": "left",
+          "fill": "#000",
+          "fontFamily": "Rosarivo",
+          "fontSize": "16"
+        },
+        {
+          "type": "textbox",
+          "text": "$description$",
+          "left": 60,
+          "top": 200,
+          "width": 338,
+          "textAlign": "left",
+          "fill": "#000",
+          "fontFamily": "Rosarivo",
+          "fontWeight": 300,
+          "fontSize": "16"
+        }, 
+        {
+          "type": "textbox",
+          "text": "$maitrise$",
+          "left": 95,
+          "top": 530,
+          "width": 268,
+          "textAlign": "center",
+          "fill": "#000",
+          "fontFamily": "Rosarivo",
+          "fontWeight": 300,
+          "fontSize": "16",
+          "default": "Maîtrise : "
+        }
+      ],
+	    "canvasBackground": "rgba(255,255,255,255)",
+	    "canvasWidth": 446.45,
+	    "canvasHeight": 623.625
+    }
+  ],
+  "description": {
+    "description": "Honor & Intrigue - Manoeuvre majeure",
+    "title": "HI-Majeure",
+    "credits": "by Arma",
+    "key": "rpg-hi1-v1",
+    "url": "https://github.com/Gulix/geckos/"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "styles": [
+    {
+      "key": "conf-sort",
+      "name": "Confrontation Sort",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name"
+        },
+        {
+          "name": "gemme",
+          "label": "Gemme",
+          "default": "2F"
+        },
+        {
+			"name": "icontype",
+			"label": "Icon Type",
+			"default": "./js/templates/conf/background-lumiere.png",
+			"type": "options",
+			"options": [
+			    {"option": "./js/templates/conf/background-lumiere.png", "text": "Lumière"},
+          {"option": "./js/templates/conf/background-tenebre.png", "text": "Ténèbres"},
+          {"option": "./js/templates/conf/background-destin.png", "text": "Destin"}
+			]
+		},
+        {
+          "name": "description",
+          "label": "Description",
+          "default": "",
+          "type": "richtext"
+        }
+      ],
+      "canvasFields": [
+        {
+			"type": "image",
+			"left": 0,
+			"top": 0,
+			"width": 451,
+			"height": 628,
+			"src": "$icontype"
+		},
+        {
+          "type": "textbox",
+          "text": "$name",
+          "left": 0,
+          "top": 60,
+          "width": 452,
+          "textAlign": "center",
+          "fill": "#000",
+          "fontFamily": "Rosarivo",
+          "fontWeight": 700,
+          "fontSize": "24"
+        },
+        {
+          "type": "textbox",
+          "text": "$gemme",
+          "left": 60,
+          "top": 100,
+          "width": 340,
+          "textAlign": "center",
+          "fill": "#000",
+          "fontFamily": "Verdana",
+          "fontSize": "14"
+        },
+        {
+          "type": "textbox",
+          "text": "$description$",
+          "left": 60,
+          "top": 120,
+          "width": 338,
+          "textAlign": "left",
+          "fill": "#000",
+          "fontFamily": "Verdana",
+          "fontWeight": 300,
+          "fontSize": "14"
+        }
+      ],
+	    "canvasBackground": "rgba(255,255,255,255)",
+	    "canvasWidth": 446.45,
+	    "canvasHeight": 623.625
+    }
+  ],
+  "description": {
+    "description": "Confrontation - Carte de Sorts",
+    "title": "Conf-Sort",
+    "credits": "by Arma",
+    "key": "rpg-conf-sort-v1",
+    "url": "https://github.com/Gulix/geckos/"
+  }
+}

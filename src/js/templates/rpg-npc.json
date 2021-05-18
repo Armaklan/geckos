@@ -5,33 +5,186 @@
       "name": "Default",
       "fields": [
         {
-          "name": "name",
-          "label": "Name",
-          "default": "PNJ"
+          "name": "nom",
+          "label": "Nom"
         },
         {
-          "type": "number",
-          "name": "nameSize",
-          "label": "Name Size",
-          "default": 30
+          "name": "classe",
+          "label": "Classe"
         },
         {
-          "type": "number",
-          "name": "textSize",
-          "label": "Text Size",
-          "default": "30"
-
+          "name": "type",
+          "label": "Type",
+          "type": "options",
+          "default": "combattant",
+          "options": [
+              { "option" : "combattant", "text": "Combattant" },
+              { "option" : "magicien", "text": "Magicien" },
+              { "option" : "pretre", "text": "Prêtre" }
+          ]
+        },
+        {
+          "name": "armee",
+          "label": "Armée",
+          "type": "options",
+          "default": "acheron",
+          "options": [
+              { "option" : "acheron", "text": "Acheron" },
+              { "option" : "griffon", "text": "Griffon" },
+              { "option" : "midnor", "text": "Mid-Nor" }
+          ]
         },
         {
           "type": "image",
           "name": "portray",
-          "label": "Portray"
+          "label": "Portrait"
         },
         {
-          "name": "description",
-          "label": "Description",
+          "type": "number",
+          "name": "mouvement",
+          "label": "Mouvement",
+          "default": 30
+        },
+        {
+          "type": "number",
+          "name": "initiative",
+          "label": "Initiative"
+        },
+        {
+          "type": "number",
+          "name": "attaque",
+          "label": "Attaque"
+        },
+        {
+          "type": "number",
+          "name": "force",
+          "label": "Force"
+        },
+        {
+          "type": "number",
+          "name": "defense",
+          "label": "Défense"
+        },
+        {
+          "type": "number",
+          "name": "resistance",
+          "label": "Résistance"
+        },
+        {
+          "name": "effrayant",
+          "label": "Effrayant",
+          "type": "checkbox",
+          "default": false
+        },
+        {
+          "type": "number",
+          "name": "courage",
+          "label": "Courage"
+        },
+        {
+          "type": "number",
+          "name": "discipline",
+          "label": "Discipline"
+        },
+        {
+          "type": "number",
+          "name": "initiative",
+          "label": "Initiative"
+        },
+        {
+          "type": "number",
+          "name": "initiative",
+          "label": "Initiative"
+        },
+        {
+          "type": "number",
+          "name": "initiative",
+          "label": "Initiative"
+        },
+        {
+          "type": "number",
+          "name": "initiative",
+          "label": "Initiative"
+        },
+        {
+          "type": "number",
+          "name": "initiative",
+          "label": "Initiative"
+        },
+        {
+          "type": "number",
+          "name": "pouvoir",
+          "label": "Pouvoir"
+        },
+        {
+          "name": "grpTir",
+          "label": "Tir",
+          "type": "group",
+          "expanded": false
+        },
+        {
+          "type": "number",
+          "name": "atttir",
+          "label": "Valeur de tir",
+          "group": "grpTir"
+        },
+        {
+          "type": "number",
+          "name": "fortir",
+          "label": "Force de tir",
+          "group": "grpTir"
+        },
+        {
+          "name": "portée",
+          "label": "Portée",
+          "group": "grpTir"
+        },
+        {
+          "name": "grpFoi",
+          "label": "Foi",
+          "type": "group",
+          "expanded": false
+        },
+        {
+          "type": "number",
+          "name": "creation",
+          "label": "Création",
+          "group": "grpFoi"
+        },
+        {
+          "type": "number",
+          "name": "alteration",
+          "label": "Altération",
+          "group": "grpFoi"
+        },
+        {
+          "type": "number",
+          "name": "destruction",
+          "label": "Destruction",
+          "group": "grpFoi"
+        },
+        {
+          "name": "equipement",
+          "label": "Equipement",
           "default": "",
           "type": "richtext"
+        },
+        {
+          "name": "competence",
+          "label": "Compétences",
+          "default": "",
+          "type": "richtext"
+        },
+        {
+          "name": "capacite",
+          "label": "Capacité",
+          "default": "",
+          "type": "richtext"
+        },
+        {
+          "type": "number",
+          "name": "pa",
+          "label": "PA"
         }
       ],
       "canvasFields": [
@@ -52,57 +205,6 @@
           "width": 400,
           "height": 400,
           "src": "$portray"
-        },
-        {
-          "type": "image",
-          "left": 456,
-          "top": 510,
-          "width": 400,
-          "height": 400,
-          "angle": 180,
-          "src": "$portray"
-        },
-        {
-          "type": "textbox",
-          "text": "$name",
-          "left": 30,
-          "top": 1000,
-          "width": 452,
-          "textAlign": "center",
-          "fill": "#000",
-          "fontFamily": "Arial",
-          "fontWeight": 700,
-          "fontSize": "$nameSize"
-
-        },
-        {
-          "type": "textbox",
-          "text": "$name",
-          "angle": 180,
-          "centerTransform": true,
-          "left": 482,
-          "top": 100,
-          "width": 452,
-          "textAlign": "center",
-          "fill": "#000",
-          "fontFamily": "Arial",
-          "fontWeight": 700,
-          "fontSize": "$nameSize"
-
-        },
-        {
-          "type": "textbox",
-          "styles": "£description",
-          "text": "$description$",
-          "left": 30,
-          "top": 1150,
-          "width": 452,
-          "textAlign": "left",
-          "fill": "#000",
-          "fontFamily": "Arial",
-          "fontWeight": 300,
-          "fontSize": "$textSize"
-
         }
       ],
       "canvasBackground": "#FFFFFF",

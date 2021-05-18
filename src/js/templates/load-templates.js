@@ -12,10 +12,14 @@ define([
     'json!templates/poleis.json',
     'json!templates/pulpalley-charactercard.json',
     'json!templates/pulpalley-fortunecard.json',
-    'json!templates/pulpcity-misc.json'//,
+    'json!templates/pulpcity-misc.json',
+    'json!templates/confrontation-lumiere.json',
+    'json!templates/confrontation-tenebre.json',
+    'json!templates/hi.json',
+    'json!templates/conf.json'
     //'json!templates/wquest-silvertower-herocard.json'
 ],
-    function (tpl1, tpl2, tpl3, tpl4, tpl5, tpl6, tpl7, tpl8, tpl9, tpl10, tpl11, tpl12, tpl13) {
+    function (tpl1, tpl2, tpl3, tpl4, tpl5, tpl6, tpl7, tpl8, tpl9, tpl10, tpl11, tpl12, tpl13, tpl14, tpl15, tpl16, tpl17) {
         return {
             load: function () {
                 var list = [];
@@ -32,6 +36,10 @@ define([
                 list.push(tpl11);
                 list.push(tpl12);
                 list.push(tpl13);
+                list.push(tpl14);
+                list.push(tpl15);
+                list.push(tpl16);
+                list.push(tpl17);
                 return list;
 
             }
