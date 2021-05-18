@@ -362,13 +362,13 @@
         {
           "type": "textbox",
           "zindex": 4,
-          "width": 650,
+          "width": 630,
           "height": 30,
           "left": 70,
           "top": 40,
           "fill": "#e6e6e6",
           "text": "$nom$",
-          "fontSize": 56,
+          "fontSize": 52,
           "fontFamily": "Libre Baskerville",
           "textAlign": "right"
         },
